@@ -14,7 +14,7 @@ const getImageUrl = async (url) => {
     return imgUrl;
 }
 
-
+//
 const scrnShot = async (url, content) => {
     const browser = await puppeteer.launch({
         args: ['--no-sandbox']
