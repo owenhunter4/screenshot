@@ -3,6 +3,8 @@ const screenshot = require("./screenshot");
 const connfirebaseDb = require("./connfirebaseDB");
 
 exports.screenshot = onRequest({ memory: "4GiB", timeoutSeconds: 540, }, async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'content-type,x-authorization');
     if (req.method === "POST") {
         const X_athu = req.headers['x-authorization'];
         if (X_athu) {
